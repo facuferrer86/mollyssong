@@ -5,7 +5,9 @@ import { mysticGenerate, reframe, MagnificError, type Cam } from "@/lib/magnific
 import type { RoomImage } from "@/lib/locations";
 
 export const runtime = "nodejs";
-export const maxDuration = 300; // generation can take a couple of minutes
+// Vercel caps function duration by plan (Hobby 60s, Pro up to 300s). 60 keeps
+// the build valid on any plan; raise to 300 on Pro for long Magnific renders.
+export const maxDuration = 60;
 
 export async function POST(req: NextRequest) {
   try {
