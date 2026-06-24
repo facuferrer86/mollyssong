@@ -1,0 +1,126 @@
+// Single source of truth for the Molly's Song hub data.
+// `DATABASE_URL` is the pooled connection (used by the app); `DIRECT_URL` is the
+// unpooled one Prisma uses for migrations. For local docker dev both can be the
+// same direct URL.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Character {
+  id        String         @id
+  name      String
+  color     String
+  img       String
+  role      String
+  fields    Json // ordered label -> text map, edited as a blob in the UI
+  prompt    String
+  order     Int
+  gallery   GalleryImage[]
+  positions BeatPosition[]
+}
+
+model GalleryImage {
+  id          Int       @id @default(autoincrement())
+  characterId String
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  u           String
+  l           String
+  order       Int
+
+  @@index([characterId])
+}
+
+model Zone {
+  key   String @id
+  label String
+  x     Float
+  y     Float
+  w     Float
+  h     Float
+  order Int
+}
+
+model Beat {
+  id        String         @id
+  act       String
+  title     String
+  meta      String
+  links     Json // array of [a,b] character-id pairs; never queried by element
+  order     Int
+  positions BeatPosition[]
+}
+
+// One character's placement in one beat. A relation (not a JSON blob on Beat) so
+// a future editor can upsert a single placement and it joins to Character.
+model BeatPosition {
+  id          Int       @id @default(autoincrement())
+  beatId      String
+  beat        Beat      @relation(fields: [beatId], references: [id], onDelete: Cascade)
+  characterId String
+  character   Character @relation(fields: [characterId], references: [id], onDelete: Cascade)
+  zoneKey     String
+  s           String
+
+  @@unique([beatId, characterId])
+}
+
+model Location {
+  id      String @id // == zone key
+  name    String
+  zoneKey String
+  color   String
+  summary String
+  order   Int
+  rooms   Room[]
+}
+
+model Room {
+  pk         String      @id @default(cuid())
+  id         String // client-facing slug, e.g. "main-lab" (unique within a location)
+  locationId String
+  location   Location    @relation(fields: [locationId], references: [id], onDelete: Cascade)
+  name       String
+  lighting   String
+  sounds     String
+  ambient    String
+  furniture  String
+  map        String
+  prompt     String
+  order      Int
+  images     RoomImage[]
+
+  @@unique([locationId, id])
+}
+
+model RoomImage {
+  id     String  @id // client-facing image id, e.g. "main-lab-abc123" or "atrium-base"
+  roomPk String
+  room   Room    @relation(fields: [roomPk], references: [pk], onDelete: Cascade)
+  u      String // permanent public URL (Supabase Storage)
+  l      String
+  cam    Json? // { rotate, vertical, closeup } slider tuple
+  base   Boolean @default(false)
+  remote String? // public source URL for image-to-image reframes (== u once hosted)
+  order  Int
+
+  @@index([roomPk])
+}
+
+model Scene {
+  id     String @id // "Act_I_Growing_Up/Scene_01_The_Lullaby.md"
+  act    String // display, e.g. "Act I — Growing Up"
+  actKey String // folder name, for canonical sort
+  title  String
+  slug   String // file name
+  text   String
+  order  Int
+
+  @@unique([actKey, slug])
+}

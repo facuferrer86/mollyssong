@@ -1,0 +1,19 @@
+# Dependencies / build
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Secrets & local env — NEVER commit (DB password, Supabase service-role key, Magnific key)
+.env
+.env.local
+.env*.local
+docker-compose.override.yml
+
+# Large generated/cached assets — now hosted in Supabase Storage
+webapp/public/renders/
+webapp/public/locations/
+
+# OS / editor
+.DS_Store
+Thumbs.db

@@ -1,0 +1,12 @@
+/node_modules
+/.next
+/out
+next-env.d.ts
+*.tsbuildinfo
+.DS_Store
+
+# Local env + secrets (Supabase keys, DB creds, Magnific key)
+.env
+.env*.local
+
+docker-compose.override.yml

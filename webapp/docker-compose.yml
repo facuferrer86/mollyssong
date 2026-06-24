@@ -1,0 +1,23 @@
+# Local Postgres for development. Hosted/prod uses Supabase instead — just point
+# DATABASE_URL / DIRECT_URL at the Supabase connection strings.
+#
+#   docker compose up -d        # start
+#   docker compose down         # stop (keeps data)
+#   docker compose down -v      # stop and wipe the volume
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: mollys
+      POSTGRES_PASSWORD: mollys
+      POSTGRES_DB: mollys_song
+    # Host port 5544 (not the default 5432) to dodge clashes with other local
+    # Postgres instances. Match DATABASE_URL/DIRECT_URL in .env.
+    ports:
+      - "5544:5432"
+    volumes:
+      - mollys_pg:/var/lib/postgresql/data
+
+volumes:
+  mollys_pg:
