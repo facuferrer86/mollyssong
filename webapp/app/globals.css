@@ -2,7 +2,7 @@
   --bg:#0e0f12; --panel:#16181d; --panel2:#1d2027; --line:#2a2e37;
   --txt:#e7e3da; --muted:#9aa0ab; --amber:#e0a458; --amber-d:#a9762f;
   --teal:#5fb3b3; --rust:#c2603c; --cool:#6f8bd6; --green:#7faf6b;
-  --molly:#c2603c; --elias:#e0a458; --kael:#7faf6b; --accord:#6f8bd6;
+  --molly:#c2603c; --elias:#e0a458; --kael:#7faf6b; --accord:#6f8bd6; --aurelian:#e7d39a;
 }
 *{box-sizing:border-box}
 html,body{padding:0;margin:0}
@@ -28,7 +28,7 @@ h2.section{font-size:15px;text-transform:uppercase;letter-spacing:1.5px;color:va
 .char-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
 .char-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;cursor:pointer;transition:.15s}
 .char-card:hover{border-color:var(--amber);transform:translateY(-3px)}
-.char-card .img{height:230px;background:#0a0b0d top/cover no-repeat;border-bottom:1px solid var(--line);position:relative}
+.char-card .img{aspect-ratio:2/3;background:#0a0b0d;border-bottom:1px solid var(--line);position:relative}
 .char-card .img .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;text-align:center;padding:12px}
 .char-card .meta{padding:13px 15px}
 .char-card .meta .name{font-size:17px;font-weight:600}
@@ -45,14 +45,14 @@ h2.section{font-size:15px;text-transform:uppercase;letter-spacing:1.5px;color:va
 .detail{display:grid;grid-template-columns:1.3fr 1fr;height:100%}
 @media(max-width:860px){.detail{grid-template-columns:1fr;height:auto;overflow-y:auto}}
 .detail .left{padding:28px;border-right:1px solid var(--line);overflow-y:auto;display:flex;flex-direction:column;gap:16px;background:#101216}
-.heroBox{display:flex;align-items:center;justify-content:center;height:62vh;background:#0a0b0d;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.heroBox img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;cursor:zoom-in}
+.heroBox{height:70vh;aspect-ratio:2/3;max-width:100%;margin:0 auto;background:#0a0b0d;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.heroBox img{width:100%;height:100%;object-fit:cover;object-position:center 18%;cursor:zoom-in}
 .detail .right{padding:28px 30px;overflow-y:auto}
 .detail .right h2{margin:0;font-size:26px;font-weight:600}
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px}
-.gallery .g{cursor:pointer;border:2px solid var(--line);border-radius:10px;overflow:hidden;background:#0a0b0d}
+.gallery .g{cursor:pointer;border:2px solid var(--line);border-radius:10px;overflow:hidden;background:#0a0b0d;aspect-ratio:2/3}
 .gallery .g.sel,.gallery .g:hover{border-color:var(--amber)}
-.gallery .g img{width:100%;height:148px;object-fit:cover;object-position:center 20%;display:block;background:#0a0b0d}
+.gallery .g img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block;background:#0a0b0d}
 .gallery .g .gl{font-size:11px;color:var(--muted);text-align:center;padding:5px 2px}
 .field{margin-bottom:18px}
 .field label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:5px}
@@ -109,8 +109,11 @@ svg.links{position:absolute;inset:0;pointer-events:none}
 .roomview{display:grid;grid-template-columns:1.15fr 1fr;gap:18px}
 @media(max-width:1000px){.roomview{grid-template-columns:1fr}}
 .roommedia{display:flex;flex-direction:column;gap:14px}
-.roommedia .heroBox{height:340px}
-.emptyhero{text-align:center;font-size:13px;line-height:1.7;padding:20px}
+/* Room renders are landscape (16:9) — override the portrait character boxes. */
+.roommedia .heroBox{height:auto;aspect-ratio:16/9;margin:0}
+.roommedia .heroBox img{object-position:center}
+.roommedia .gallery .g{aspect-ratio:16/9}
+.emptyhero{display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;line-height:1.7;padding:20px}
 .roomfields{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;height:fit-content}
 .camctl{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;flex-direction:column;gap:10px}
 .camhead{display:flex;justify-content:space-between;align-items:baseline;font-size:13px}

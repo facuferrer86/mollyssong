@@ -74,7 +74,7 @@ export default function Characters({ initial }: { initial: Character[] }) {
         {chars.map((c) => (
           <div className="char-card" key={c.id} onClick={() => openDrawer(c.id)}>
             <div className="img" style={{ position: "relative" }}>
-              <Img src={c.img} alt={c.name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 20%" }} />
+              <Img src={c.img} alt={c.name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center 18%" }} />
             </div>
             <div className="meta">
               <div className="name">
