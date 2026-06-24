@@ -8,8 +8,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 The single source of truth is now a **PostgreSQL database** (Supabase in prod, docker Postgres locally). The webapp reads and writes that DB; there is no longer a markdown/JSON/hardcoded split to keep in sync.
 
-- **The data** — Postgres tables for characters, beats/zones, locations/rooms/room-images, and screenplay scenes. Seeded once from `webapp/lib/data.ts` + `webapp/lib/locations.ts` (the typed defaults) and the `Screenplay/**/*.md` files, then edited in place through the app.
-- **Legacy / retired** — the markdown under `Characters/`, `Plot/`, `World/`, `Visual_Development/` is no longer read by the app (kept as a manual archive). `Screenplay/**/*.md` is the seed source for scenes but is not read at runtime after seeding. The standalone `Mollys_Song_Project_Hub.html` (single-file, localStorage-only) was superseded by the webapp.
+- **The data** — Postgres tables for characters, beats/zones, locations/rooms/room-images, and screenplay scenes. Seeded once from `webapp/lib/data.ts` + `webapp/lib/locations.ts` (the typed defaults) and the `archive/Screenplay/**/*.md` files, then edited in place through the app.
+- **Archived canon** — all hand-written markdown now lives under `archive/` (`Characters/`, `Plot/`, `World/`, `Visual_Development/`, `Screenplay/`). The app does not read it at runtime; `archive/Screenplay/**/*.md` is still the seed source for scenes (`prisma/seed.ts`). The old single-file `Mollys_Song_Project_Hub.html` has been removed (superseded by the webapp).
 
 ## Commands (all run inside `webapp/`)
 
@@ -62,4 +62,4 @@ The antagonist AI is **"The Accord"** everywhere — a two-tier Core/Trooper des
 
 ## Visual development workflow
 
-`Visual_Development/` holds the prompt bible (`Character_Prompt_Bible.md`) and the image pipeline (`Image_Pipeline_Guide.md`). The intended pipeline is **generate consistent faces upstream** (Midjourney `--cref`, Flux + LoRA) → **finish in Magnific** (upscale/relight). Master Prompts in `lib/data.ts` mirror the bible. Magnific image tooling is available via MCP in this environment if generating new renders.
+`archive/Visual_Development/` holds the prompt bible (`Character_Prompt_Bible.md`) and the image pipeline (`Image_Pipeline_Guide.md`). The intended pipeline is **generate consistent faces upstream** (Midjourney `--cref`, Flux + LoRA) → **finish in Magnific** (upscale/relight). Master Prompts in `lib/data.ts` mirror the bible. Magnific image tooling is available via MCP in this environment if generating new renders.

@@ -175,8 +175,8 @@ async function main() {
     }
   }
 
-  // Scenes from Screenplay markdown (act subfolders only, mirroring getScenes)
-  const screenplay = path.resolve(process.cwd(), "..", "Screenplay");
+  // Scenes from the archived Screenplay markdown (act subfolders only).
+  const screenplay = path.resolve(process.cwd(), "..", "archive", "Screenplay");
   let folders: string[] = [];
   try {
     folders = fs

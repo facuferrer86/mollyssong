@@ -22,12 +22,14 @@ export default function Hub({
   scenes,
   beats,
   zones,
+  userEmail,
 }: {
   characters: Character[];
   locations: Location[];
   scenes: Scene[];
   beats: Beat[];
   zones: Record<string, Zone>;
+  userEmail?: string | null;
 }) {
   const [tab, setTab] = useState("characters");
   return (
@@ -40,8 +42,13 @@ export default function Hub({
         <span className="tag">
           {beats.length} story beats · {characters.length} characters
         </span>
-        <span style={{ marginLeft: "auto" }} className="muted">
-          Edits save to your project files
+        <span style={{ marginLeft: "auto" }} className="user-box">
+          {userEmail && <span className="muted">{userEmail}</span>}
+          <form action="/auth/signout" method="post" style={{ display: "inline" }}>
+            <button className="btn" type="submit">
+              Sign out
+            </button>
+          </form>
         </span>
       </header>
       <nav className="tabs">

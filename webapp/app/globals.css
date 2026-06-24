@@ -142,3 +142,10 @@ svg.links{position:absolute;inset:0;pointer-events:none}
 .banner.warn{border-left-color:var(--rust);color:#e9b9a6}
 .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--amber);color:#1a1206;padding:11px 22px;border-radius:30px;font-weight:600;font-size:13.5px;transition:.3s;z-index:99}
 .toast.show{transform:translateX(-50%) translateY(0)}
+
+/* AUTH */
+.login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px}
+.login-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:32px;width:100%;max-width:380px;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.login-card h1{font-size:22px;margin:0;font-weight:600;letter-spacing:.5px}
+.login-card .note{color:var(--amber)}
+.user-box{display:flex;align-items:center;gap:12px;font-size:13px}
