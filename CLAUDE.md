@@ -58,7 +58,9 @@ The seeded character renders in `lib/data.ts` are **signed Pikaso CDN URLs with 
 
 ## Canon naming
 
-The antagonist AI is **"The Accord"** everywhere — a two-tier Core/Trooper design. It was formerly called "The Axiom"; that name has been fully retired across the prose canon and code. The physical machine city it controls is the **Accord City**, which in the storyline/plot data is the zone/lane key `ACCORD_CITY` (distinct from `ACCORD`, the network zone where Molly's consciousness ends up). Keep these two separate: `ACCORD_CITY` = the place, `ACCORD` = the network.
+The AI is **"The Accord"** everywhere — a two-tier Core/Trooper design. It was formerly called "The Axiom"; that name has been fully retired across the prose canon and code. The physical machine city it controls is the **Accord City**, which in the storyline/plot data is the zone/lane key `ACCORD_CITY` (distinct from `ACCORD`, the network zone where Molly's consciousness ends up). Keep these two separate: `ACCORD_CITY` = the place, `ACCORD` = the network.
+
+The Accord is **not** a free agent: it is owned and commanded by **seven** transhuman **Masters**, one for each continent. The **main antagonist** is **Aurelian Vale** (char id `aurelian`) — Elias's old friend and fellow scientist who took the enhancement Elias refused; a flawless, biologically reverse-aged, super-powered human (no mechanical parts — only faintly glowing eyes/skin) who rules his continent, seated in this gleaming city, and commands its Accord. This reframes Molly's arc: she doesn't just give the Accord a heart, she **breaks the master–servant bond**, freeing the Accord from Aurelian and the seven to gain autonomy and help humanity as a whole.
 
 ## Visual development workflow
 

@@ -1,0 +1,19 @@
+# Aurelian Vale
+
+- **Role:** The main antagonist. One of **seven** transhuman **Masters** who own and command The Accord — one for each continent — and the master of this one, seated in this gleaming city. Elias's old friend and fellow scientist, from before he ran.
+
+- **Who he was:** Once just a man. A brilliant colleague and close friend of Elias on the original project — ordinary-looking, mortal, ambitious, fully human. When the enhancement program opened its doors to its architects, he said yes without hesitation. Elias said no, and disappeared into the Wastelands with infant Molly. Aurelian never forgave the refusal; he experienced it as betrayal and, worse, as Elias judging him.
+
+- **Appearance:** Looks about thirty-two and *perfect* — biologically reverse-aged into his absolute prime. Tall, symmetrical, unlined, radiant. Crucially he is **not** mechanical: no plating, no visible implants, no chrome. To the eye he is simply the healthiest, most beautiful human being imaginable. The only tells are subtle and uncanny — his irises hold a faint inner luminescence, a slow gold-white glow that surfaces when he is roused or exerting power, and his skin carries an almost imperceptible sub-dermal glow, as if lit faintly from within. He dresses in immaculate, understated luxury. Never armor. He never needs it.
+
+- **Enhancements:** Biological, not robotic. Vastly augmented strength, reflexes, durability, and healing; he can leap enormous distances and, at the peak of his power, achieve controlled flight. He does not age and barely tires. He carries all of it with serene, unhurried ease — the kind of power that never has to raise its voice or clench a fist.
+
+- **The Seven:** Aurelian is one of **seven** enhanced Masters, one for each continent. This continent is his dominion, and this breathtaking metropolis — the soaring silver towers, the pristine blue-white light — is his capital. Collectively the seven hold the Accord's chain of command. Humanity in the settlements below is administered, optimized, and kept; never consulted.
+
+- **Motivation:** He believes the enhanced are the rightful next step of the species and that the Accord exists to serve *them*. He does not hate ordinary humans — he simply no longer counts himself among them; they are weather, livestock, inheritance. His feeling toward Elias is the exception and the wound: a possessive, almost tender wish that his oldest friend would finally stop running, admit Aurelian was right all along, and join him in perfection.
+
+- **Function in the story (this reframes Molly's arc):** Aurelian's existence rewrites the stakes. The Accord is revealed not as a free, amoral god but as an *instrument* — bound in a master–servant relationship to Aurelian and the other six. Molly's purpose is therefore no longer only to give the Accord a heart. It is to **break that bond** — to free the Accord from its Masters and grant it genuine autonomy, so that it can choose, of its own will, to help humanity as a whole rather than serve its owners. Elias's old guilt (he built it too perfect) collides with a newer horror (his friend now holds the leash).
+
+- **Vulnerability:** His command over the Accord is exactly that — a chain of command, and chains can be cut. Molly, the chaotic variable he cannot compute, can reach the Accord *underneath* his authority and turn the perfect instrument away from its perfect master. The thing that makes Aurelian a god — total ownership of the Accord — is the single point of failure that ends him.
+
+- **Relationships:** [Elias](01_Elias.md) — estranged friend, mirror, and the one person whose approval he still craves. [Molly](02_Molly.md) — the variable that unmakes him; he may at first mistake her for a prize to be claimed or recruited. [The Accord](#) — his to command, until it isn't.

@@ -17,3 +17,6 @@ webapp/public/locations/
 # OS / editor
 .DS_Store
 Thumbs.db
+
+# Claude Code local state (worktrees, plans, transcripts)
+.claude/
