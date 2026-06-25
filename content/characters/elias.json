@@ -4,11 +4,17 @@
   "color": "var(--elias)",
   "role": "Father, scientist, scavenger — a secret creator of The Accord.",
   "fields": {
+    "Flaw": "(draft) Secrecy. He lies 'to protect her,' and the lies curdle into their own betrayal.",
+    "Need": "(draft) To accept that atonement can't be bought with his daughter's life — that love means protecting Molly, not sacrificing her. [open: redemption or tragedy?]",
     "Role": "Protagonist. Scientist, father, scavenger.",
+    "Want": "(draft) To fix the broken world he helped create — to give the Accord the heart his team left out.",
+    "Voice": "(draft) Warm, measured, evasive — a teacher who answers a question with another question; hums three notes when afraid.",
     "Secret": "Retains 'admin' backdoor access to the Accord's systems.",
     "Appearance": "Late 40s–50s. Warm soulful brown eyes, salt-and-pepper beard, grey-flecked hair, weathered skin, engineer's scarred hands. A bittersweet half-smile.",
     "Motivation": "Guilt and atonement. He helped create the Accord; now he wants to give it the heart his team omitted — even at the cost of his daughter.",
-    "Internal Conflict": "Love for Molly vs. his need to sacrifice her to fix the world he helped break."
+    "Ghost / Wound": "(draft) He helped build the Accord, then watched the enhanced seize its keys; he fled the program and Aurelian carrying that guilt.",
+    "Internal Conflict": "Love for Molly vs. his need to sacrifice her to fix the world he helped break.",
+    "Lie / False Belief": "(draft) That the only road to forgiveness is to undo his mistake at any cost — even Molly."
   },
   "prompt": "Gritty photorealistic post-apocalyptic prestige-drama look — 35mm film grain, shallow DOF, naturalistic warm light, muted desaturated grade. Close-up of ELIAS, ruggedly handsome late-40s man, warm soulful deep-brown eyes, full salt-and-pepper beard, thick grey-flecked brown hair, weathered skin with smile lines, tired determined gaze, bittersweet half-smile. Heavy worn wool coat over a patched sweater, scarred engineer's hands near his face. Single hanging bulb, amber light, underground lab behind.",
   "order": 1,

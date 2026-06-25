@@ -46,7 +46,9 @@ h2.section{font-size:15px;text-transform:uppercase;letter-spacing:1.5px;color:va
 @media(max-width:860px){.detail{grid-template-columns:1fr;height:auto;overflow-y:auto}}
 .detail .left{padding:28px;border-right:1px solid var(--line);overflow-y:auto;display:flex;flex-direction:column;gap:16px;background:#101216}
 .heroBox{height:70vh;aspect-ratio:2/3;max-width:100%;margin:0 auto;background:#0a0b0d;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.heroBox img{width:100%;height:100%;object-fit:cover;object-position:center 18%;cursor:zoom-in}
+/* Big preview shows the WHOLE image (no crop) so full-body shots keep their feet;
+   the small grid cards + gallery thumbs stay cover-cropped for a tidy grid. */
+.heroBox img{width:100%;height:100%;object-fit:contain;object-position:center;cursor:zoom-in}
 .detail .right{padding:28px 30px;overflow-y:auto}
 .detail .right h2{margin:0;font-size:26px;font-weight:600}
 .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px}
@@ -111,7 +113,7 @@ svg.links{position:absolute;inset:0;pointer-events:none}
 .roommedia{display:flex;flex-direction:column;gap:14px}
 /* Room renders are landscape (16:9) — override the portrait character boxes. */
 .roommedia .heroBox{height:auto;aspect-ratio:16/9;margin:0}
-.roommedia .heroBox img{object-position:center}
+.roommedia .heroBox img{object-fit:cover;object-position:center}
 .roommedia .gallery .g{aspect-ratio:16/9}
 .emptyhero{display:flex;align-items:center;justify-content:center;text-align:center;font-size:13px;line-height:1.7;padding:20px}
 .roomfields{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px;height:fit-content}

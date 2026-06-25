@@ -5,10 +5,16 @@
   "role": "Settlement boy. Molly's anchor to the outside world.",
   "fields": {
     "Arc": "Street-smart skeptic → Molly's guide and anchor → refuses to accept her fate → witness to her sacrifice.",
+    "Flaw": "(draft) Self-preserving cynicism that wars with his own fierce loyalty.",
+    "Need": "(draft) To let himself believe something is worth more than mere survival — to risk hope.",
     "Role": "Deuteragonist. A boy from the settlements.",
+    "Want": "(draft) To survive, and to keep Molly safe in a world that devours the soft.",
+    "Voice": "(draft) Clipped, dry, street-smart; cracks a joke to cover fear.",
     "Appearance": "Early teens, wiry and quick. Weathered sun-touched skin, dark messy hair, sharp watchful eyes, a small scar through one eyebrow. Scavenged, strapped gear.",
     "Motivation": "Curiosity and survival; becomes fiercely protective of Molly. The voice of caution against Elias's grand plans.",
-    "Personality": "World-wise and street-smart with a core of idealism. Represents the new generation born into the ruins."
+    "Personality": "World-wise and street-smart with a core of idealism. Represents the new generation born into the ruins.",
+    "Ghost / Wound": "(draft — TBD) What did the settlements take from him? (a lost sibling / parent?) — define his wound.",
+    "Lie / False Belief": "(draft) Trusting anyone but yourself gets you killed."
   },
   "prompt": "Gritty photorealistic post-apocalyptic prestige-drama look — 35mm film grain, shallow DOF, naturalistic warm light, muted desaturated grade. Portrait of KAEL, wiry teenage boy ~14, weathered sun-touched skin, dark messy dust-flecked hair, sharp watchful eyes, small scar through one eyebrow, guarded but idealistic. Layered scavenged gear with improvised straps, frayed scarf. Dusty settlement market, ochre daylight.",
   "order": 2,
