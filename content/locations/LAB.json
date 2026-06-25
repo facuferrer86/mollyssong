@@ -1,0 +1,89 @@
+{
+  "id": "LAB",
+  "name": "Underground Lab",
+  "zoneKey": "LAB",
+  "color": "var(--elias)",
+  "order": 0,
+  "summary": "Elias's hidden bunker where Molly is raised in secret. Cramped, warm, hand-repaired — the irreplaceable broken things that are the Accord's opposite.",
+  "rooms": [
+    {
+      "id": "main-lab",
+      "name": "Main Laboratory",
+      "lighting": "Single hanging bulb, warm amber pool of light fading into deep shadow; filtered daylight from a grimy skylight.",
+      "sounds": "Low hum of old servers, intermittent drip, the three-note lullaby playing faintly from a speaker.",
+      "ambient": "Lived-in, secret, protective. The heart of the bunker.",
+      "furniture": "Scarred steel workbench, mismatched salvaged chairs, racks of repaired electronics, a cot in the corner.",
+      "map": "Long rectangular room; workbench along the right wall, server racks at the back, skylight above center, blast door to the left.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. An underground laboratory bunker: scarred steel workbench cluttered with hand-repaired electronics and tools, racks of humming salvaged servers, a single warm hanging bulb, a grimy skylight leaking pale daylight, concrete walls with exposed conduit.",
+      "_readonly": {
+        "images": []
+      }
+    },
+    {
+      "id": "quarters",
+      "name": "Molly's Quarters",
+      "lighting": "Soft, dim, intimate — a string of low warm LEDs and one reading lamp.",
+      "sounds": "Muffled hum through the wall, the faint lullaby, the creak of the cot.",
+      "ambient": "Private, adolescent, a little restless — a kept child's world.",
+      "furniture": "Narrow cot, a shelf of salvaged books and trinkets, a cracked mirror, the tarnished silver locket on a nail.",
+      "map": "Small alcove off the main lab; cot against the back wall, shelf to the right, curtain for a door.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A cramped private sleeping alcove in an underground bunker: a narrow cot with worn blankets, a shelf of salvaged books and small trinkets, a cracked mirror, a string of dim warm LEDs, a curtained doorway, concrete walls.",
+      "_readonly": {
+        "images": []
+      }
+    },
+    {
+      "id": "archive",
+      "name": "The Hidden Archive",
+      "lighting": "Cold blue glow of a single active terminal in the dark; everything else black.",
+      "sounds": "Cooling fans, the click of a keyboard, oppressive silence.",
+      "ambient": "Forbidden, tense — where Molly finds the truth.",
+      "furniture": "A locked server cabinet, one terminal and chair, sealed crates of records.",
+      "map": "Concealed room behind the server racks; terminal facing the door, locked cabinet on the far wall.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A hidden archive room behind a concealed door in an underground bunker: a locked server cabinet, a single glowing terminal screen casting cold blue light in the dark, sealed crates of old records, heavy shadows.",
+      "_readonly": {
+        "images": []
+      }
+    },
+    {
+      "id": "workshop",
+      "name": "Repair Bay",
+      "lighting": "Harsh white work-lamp clamped to a vise, sparks, the rest in gloom.",
+      "sounds": "Whir of a hand drill, clink of tools, hiss of a soldering iron.",
+      "ambient": "Industrious, greasy, where things get fixed.",
+      "furniture": "Pegboard of tools, a vise-mounted bench, half-dismantled machines, oil drums.",
+      "map": "Side bay off the main lab; bench under the work-lamp, tool wall to the left, parts bins below.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A cluttered repair bay in an underground bunker: a pegboard wall of tools, a vise-mounted workbench under a harsh white clamp lamp, half-dismantled machines and salvaged parts, oil drums, grease-stained concrete floor.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "workshop-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/LAB/workshop/workshop-base.png",
+            "base": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "skylight",
+      "name": "The Skylight Nook",
+      "lighting": "A single shaft of pale grey daylight from a grimy skylight; dust motes.",
+      "sounds": "Wind over the surface above, distant and lonely.",
+      "ambient": "Wistful, yearning — Molly's one window to the sky she can't reach.",
+      "furniture": "A cushioned crate to sit on, a telescope aimed at the skylight, scattered drawings.",
+      "map": "Tall narrow shaft at the lab's center; seat directly under the skylight, drawings pinned around.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A quiet nook beneath a tall grimy skylight in an underground bunker: a single shaft of pale daylight cutting through dust motes, a cushioned crate seat, a small telescope aimed upward, children's drawings pinned to concrete.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "skylight-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/LAB/skylight/skylight-base.png",
+            "base": true
+          }
+        ]
+      }
+    }
+  ]
+}

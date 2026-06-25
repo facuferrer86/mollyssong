@@ -1,0 +1,50 @@
+{
+  "id": "kael",
+  "name": "Kael",
+  "color": "var(--kael)",
+  "role": "Settlement boy. Molly's anchor to the outside world.",
+  "fields": {
+    "Arc": "Street-smart skeptic → Molly's guide and anchor → refuses to accept her fate → witness to her sacrifice.",
+    "Role": "Deuteragonist. A boy from the settlements.",
+    "Appearance": "Early teens, wiry and quick. Weathered sun-touched skin, dark messy hair, sharp watchful eyes, a small scar through one eyebrow. Scavenged, strapped gear.",
+    "Motivation": "Curiosity and survival; becomes fiercely protective of Molly. The voice of caution against Elias's grand plans.",
+    "Personality": "World-wise and street-smart with a core of idealism. Represents the new generation born into the ruins."
+  },
+  "prompt": "Gritty photorealistic post-apocalyptic prestige-drama look — 35mm film grain, shallow DOF, naturalistic warm light, muted desaturated grade. Portrait of KAEL, wiry teenage boy ~14, weathered sun-touched skin, dark messy dust-flecked hair, sharp watchful eyes, small scar through one eyebrow, guarded but idealistic. Layered scavenged gear with improvised straps, frayed scarf. Dusty settlement market, ochre daylight.",
+  "order": 2,
+  "_readonly": {
+    "img": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4683837809.jpg",
+    "gallery": [
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4683837809.jpg",
+        "l": "Hero"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684316934.jpg",
+        "l": "Full body"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684318264.jpg",
+        "l": "Wary"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684319290.jpg",
+        "l": "Awe"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684318728.jpg",
+        "l": "Protective"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684320285.jpg",
+        "l": "Grin"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684320503.jpg",
+        "l": "Fear"
+      }
+    ],
+    "mapX": null,
+    "mapY": null
+  }
+}

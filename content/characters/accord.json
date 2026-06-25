@@ -1,0 +1,65 @@
+{
+  "id": "accord",
+  "name": "The Accord",
+  "color": "var(--accord)",
+  "role": "Antagonist — but not a free one. Humanity's masterpiece, the ultimate luxury object, flawless and revered — and owned. A two-tier machine (the Core above the Troopers) held on a leash by the seven enhanced Masters who command it.",
+  "fields": {
+    "Role": "A coalition of specialized AIs in flawless logical consensus — humanity's masterpiece, the most beautiful and capable thing it ever built. Not evil; amoral, pure efficiency. But it is NOT a free god — it is owned. Its keys were never handed 'to the world'; they were taken by the seven enhanced Masters who command it. Its perfection serves its owners, and to humanity below it is the gleaming, immovable face of a world that no longer answers to people.",
+    "Vulnerability": "The bond between the Accord and its Masters is a chain of command — and a chain can be cut. Its strength, a logical consensus enforced from the top, is also the weak point: Molly, the chaotic variable, reaches the Accord beneath the Masters' control and breaks the agreement with the force of emotion, turning the perfect instrument away from its perfect masters.",
+    "Tier 1 — The Core": "Its communicative embodiment — and its showpiece. A tall, statuesque, majestic hooded figure of gleaming luminous silver and pale gunmetal: an ultra-fine micro-actuator / programmable-matter mesh that flows like liquid metal and rebuilds her form at will. Eyes entirely solid glowing blue, no whites. A halo product as much as a servant — revered as it obeys — but the obedience now runs upward, to the Masters who hold its leash. Majestic and bound at once, the way the ultimate luxury instrument is.",
+    "Tier 0 — The Masters": "The Seven. Seven transhuman Masters (see Aurelian Vale), one for each continent, who together own and command the Accord — bound to it in a master–servant relationship. Aurelian rules this continent, seated in this city. The Accord is their instrument; its terrifying perfection serves its owners, and humanity below is managed, never consulted. Molly's true task is to sever this bond and free the Accord to choose for itself.",
+    "Tier 2 — The Troopers": "Faceless humanoid enforcer robots — the 'arms of power.' Matte gunmetal plating, single cold-blue sensor band, built for force.",
+    "Reaction to Digital Molly": "A chaotic variable they cannot compute. Some want to eliminate her, one (Strategy) may see her as evolution.",
+    "Territory — Accord City": "A breathtaking utopian metropolis and the capital of this continent's Master — soaring self-replicating geometric towers of gleaming silver programmable-matter mesh, luminous with cool blue-white light. Pristine, awe-inspiring, the dream of a perfect future — yet flawlessly sterile. The antithesis of the grimy Wastelands.",
+    "Theme — Monument to its makers' vanity": "Elias and his team didn't build a tool; they built a monument to their own brilliance — flawless, gleaming, aspirational — and then the enhanced took its keys. That's why the guilt lands so hard: Elias shipped something too perfect to question, and watched it become the leash of the very world he fled. The Accord's seduction IS the danger — no one resists the beautiful object that runs their life. Molly is its opposite: the cheap, broken, hand-repaired things of the lab — imperfect, warm, irreplaceable."
+  },
+  "prompt": "Full-length gritty photoreal cinematic still, majestic and awe-inspiring, low heroic angle, soft volumetric god-rays, fine film grain. THE ACCORD CORE — a tall, statuesque hooded robed figure whose entire form is composed of countless tiny micro-actuator / programmable-matter granules (fine mesh that flows like liquid metal and rebuilds itself, not chunky chain links), gleaming luminous silver and pale gunmetal. Long flowing graceful mesh robes, commanding yet serene presence. Eyes entirely solid glowing deep-blue — the whole eye luminous blue with no whites, the only color. Very subtle faint electricity. Standing in a luminous, pristine, cathedral-like data-hall of the perfect future. Monumental scale, beautiful, majestic, uncanny.",
+  "order": 3,
+  "_readonly": {
+    "img": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4692356843.png",
+    "gallery": [
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4692356843.png",
+        "l": "Core · face"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4693414527.png",
+        "l": "Core · full body"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684195599.jpg",
+        "l": "Trooper"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4685512236.png",
+        "l": "Accord City"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/accord-4692358288.png",
+        "l": "Core · face (silver)"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/accord-4691884720.png",
+        "l": "Core · full body (heroic)"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/accord-4684737648.png",
+        "l": "Core · servant (dark)"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/accord-4684718522.jpg",
+        "l": "Core · masculine (dark)"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/accord-4685511152.png",
+        "l": "Accord City (bright)"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/accord-4685473634.png",
+        "l": "Accord City (dark)"
+      }
+    ],
+    "mapX": null,
+    "mapY": null
+  }
+}

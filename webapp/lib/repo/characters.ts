@@ -18,6 +18,8 @@ export async function getCharacters(): Promise<Character[]> {
     role: c.role,
     fields: (c.fields as Record<string, string>) ?? {},
     prompt: c.prompt,
+    mapX: c.mapX,
+    mapY: c.mapY,
   }));
 }
 

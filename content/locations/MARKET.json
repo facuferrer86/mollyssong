@@ -1,0 +1,70 @@
+{
+  "id": "MARKET",
+  "name": "Settlement / Market",
+  "zoneKey": "MARKET",
+  "color": "var(--kael)",
+  "order": 1,
+  "summary": "The dusty surface settlement where Kael grows up. Scavenged, ochre, alive — the last clinging human community.",
+  "rooms": [
+    {
+      "id": "square",
+      "name": "Market Square",
+      "lighting": "Flat ochre daylight under a hazy sun, long dusty shadows.",
+      "sounds": "Bartering voices, clatter of carts, a barking dog, wind-driven grit.",
+      "ambient": "Crowded, wary, surviving — humanity hanging on.",
+      "furniture": "Patched tarpaulin stalls, crates of salvage, a communal water cistern, strung wires.",
+      "map": "Open square ringed by stalls; water cistern at center, main road entering from the south.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A post-apocalyptic settlement market square: patched tarpaulin stalls, crates of scavenged goods, a communal water cistern, strung wires and faded flags, dusty ochre daylight, ramshackle buildings beyond.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "square-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/MARKET/square/square-base.png",
+            "base": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "kael-shelter",
+      "name": "Kael's Shelter",
+      "lighting": "Dim, slatted light through corrugated gaps; a small fire's glow.",
+      "sounds": "Crackling fire, wind rattling metal sheeting, distant market hum.",
+      "ambient": "Makeshift, resourceful, home to a street-smart kid.",
+      "furniture": "A bedroll, a crate of tools and trophies, a small fire pit, hung scavenged gear.",
+      "map": "Tight lean-to against a ruined wall; bedroll at back, fire pit near the entrance flap.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A makeshift shelter built into post-apocalyptic ruins: corrugated metal walls with slatted light, a bedroll, a small fire pit glowing, scavenged tools and gear hung on the walls, a young survivor's hideout.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "kael-shelter-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/MARKET/kael-shelter/kael-shelter-base.png",
+            "base": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "stalls",
+      "name": "Scavenger Stalls",
+      "lighting": "Shadowed under awnings, shafts of dusty light between them.",
+      "sounds": "Haggling, clink of traded parts, the creak of awning poles.",
+      "ambient": "Transactional, cluttered, full of salvaged history.",
+      "furniture": "Trestle tables of sorted scrap, hanging tools, weigh-scales, lock-boxes.",
+      "map": "A row of covered stalls along a narrow lane; tables facing the walkway, storage behind.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A row of scavenger trading stalls in a post-apocalyptic market: trestle tables piled with sorted scrap and salvaged machine parts, hanging tools, weigh-scales, tattered awnings, shafts of dusty light.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "stalls-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/MARKET/stalls/stalls-base.png",
+            "base": true
+          }
+        ]
+      }
+    }
+  ]
+}

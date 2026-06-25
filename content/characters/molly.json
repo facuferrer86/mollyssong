@@ -1,0 +1,64 @@
+{
+  "id": "molly",
+  "name": "Molly",
+  "color": "var(--molly)",
+  "role": "The lead. Spans toddler → child → teen → digital consciousness.",
+  "fields": {
+    "Arc": "Curious confined child → restless rebellious teen → horrified witness of the dying world → conscious self-sacrifice → empathetic 'voice' of the Accord.",
+    "Need": "To accept that loving the world may mean dissolving herself into it — choosing sacrifice over self-preservation.",
+    "Role": "Protagonist. The 16-year-old is the main-story Molly.",
+    "Want": "To get out of the underground lab, uncover the truth about her father, and protect the people she loves (Kael) in a dying world.",
+    "Abilities": "Doesn't 'hack' the network — she 'feels' it. Introduces illogic, creativity, and emotion into the system.",
+    "Appearance": "Wide-set intelligent hazel-green eyes, dark auburn-brown hair, freckles, pale indoor skin, stubborn jaw. Recurring prop: the tarnished silver locket.",
+    "Motivation": "Driven first by her bond with Kael and the revelation of her father's past; ultimately understands and chooses her own sacrifice."
+  },
+  "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine grain, naturalistic light with warm amber practicals, muted desaturated grade with teal shadows, realistic weathered skin. Close-up of MOLLY, 16, wide-set hazel-green eyes, dark auburn-brown hair loosely tied back, freckles across the nose, pale indoor skin, stubborn determined jaw, fiercely curious. Worn henley under a utilitarian vest, tarnished silver locket. Filtered daylight from a grimy skylight in an underground lab.",
+  "order": 0,
+  "_readonly": {
+    "img": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4683837301.jpg",
+    "gallery": [
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4683837301.jpg",
+        "l": "Hero · 16"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684070287.jpg",
+        "l": "Age 12"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684073271.jpg",
+        "l": "Age 14"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684074225.jpg",
+        "l": "Digital"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684282461.jpg",
+        "l": "Full body"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684282719.jpg",
+        "l": "Determined"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684283745.jpg",
+        "l": "Awe"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684284054.jpg",
+        "l": "Joy"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684288564.jpg",
+        "l": "Grief"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684288166.jpg",
+        "l": "Wonder"
+      }
+    ],
+    "mapX": null,
+    "mapY": null
+  }
+}

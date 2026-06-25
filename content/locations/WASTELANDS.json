@@ -1,0 +1,70 @@
+{
+  "id": "WASTELANDS",
+  "name": "The Wastelands",
+  "zoneKey": "WASTELANDS",
+  "color": "var(--rust)",
+  "order": 2,
+  "summary": "The dying world between settlement and city — ruins, dust, and the wreckage of the old world Molly first sees with horror and awe.",
+  "rooms": [
+    {
+      "id": "ruins",
+      "name": "Collapsed Ruins",
+      "lighting": "Stark overcast daylight, weak sun behind dust haze.",
+      "sounds": "Wind keening through broken structures, settling debris.",
+      "ambient": "Desolate, vast, awe and dread — the scale of what was lost.",
+      "furniture": "Toppled concrete slabs, rebar tangles, a half-buried car, encroaching dust drifts.",
+      "map": "Open field of rubble; a leaning tower fragment to the north, a road trace running east-west.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A vast field of collapsed post-apocalyptic ruins: toppled concrete slabs and tangled rebar, a half-buried rusted car, dust drifts, a leaning tower fragment on the horizon under stark overcast haze.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "ruins-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/WASTELANDS/ruins/ruins-base.png",
+            "base": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "highway",
+      "name": "Highway Graveyard",
+      "lighting": "Low golden hour raking across rusted metal, long shadows.",
+      "sounds": "Wind through hollow chassis, creak of metal, far-off grit.",
+      "ambient": "Eerie, frozen-in-time — a river of dead machines.",
+      "furniture": "Endless rusted vehicles nose-to-tail, a collapsed overpass, sun-bleached signage.",
+      "map": "A choked highway curving toward the horizon; collapsed overpass mid-distance, vehicles jammed the full width.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A post-apocalyptic highway graveyard: a river of rusted abandoned vehicles nose-to-tail stretching to the horizon, a collapsed overpass, sun-bleached signage, low golden-hour light raking across the metal.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "highway-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/WASTELANDS/highway/highway-base.png",
+            "base": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "ridge",
+      "name": "The Ridge Overlook",
+      "lighting": "Cold blue dusk, the distant city glowing on the horizon.",
+      "sounds": "High wind, the hush of a vast empty distance.",
+      "ambient": "Pivotal, ominous — first sight of the Accord City ahead.",
+      "furniture": "Bare rock outcrop, a wind-stunted dead tree, a cairn of stacked stones.",
+      "map": "A high ridge edge looking out; the gleaming city far on the horizon, the wasteland sprawling below.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A high rocky ridge overlooking a post-apocalyptic wasteland at cold blue dusk: a bare outcrop, a wind-stunted dead tree, and far on the horizon a faint gleaming geometric city glowing cool blue-white.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "ridge-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/WASTELANDS/ridge/ridge-base.png",
+            "base": true
+          }
+        ]
+      }
+    }
+  ]
+}

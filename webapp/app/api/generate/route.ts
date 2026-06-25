@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getLocations, getRoom, addRoomImage } from "@/lib/repo/locations";
+import { getShot, setShotImage } from "@/lib/repo/shots";
 import { uploadFromUrl } from "@/lib/storage";
 import { mysticGenerate, reframe, MagnificError, type Cam } from "@/lib/magnific";
 import type { RoomImage } from "@/lib/locations";
@@ -12,6 +13,27 @@ export const maxDuration = 60;
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
+
+    // Storyboard keyframe: text-to-image from the shot's prompt → permanent host.
+    if (body.kind === "shot-keyframe") {
+      const pk = String(body.pk);
+      const shot = await getShot(pk);
+      if (!shot) {
+        return NextResponse.json({ ok: false, error: "Unknown shot" }, { status: 404 });
+      }
+      const prompt = (shot.prompt || shot.description).trim();
+      if (!prompt) {
+        return NextResponse.json(
+          { ok: false, error: "Add a prompt (or description) to this shot first." },
+          { status: 400 }
+        );
+      }
+      const generated = await mysticGenerate(prompt);
+      const u = await uploadFromUrl(generated, `shots/${pk}/${Date.now().toString(36)}`);
+      const updated = await setShotImage(pk, u);
+      return NextResponse.json({ ok: true, shot: updated });
+    }
+
     const locId = String(body.locationId);
     const roomId = String(body.roomId);
     const room = await getRoom(locId, roomId);

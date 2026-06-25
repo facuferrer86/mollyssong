@@ -1,0 +1,19 @@
+{
+  "id": "molly",
+  "logline": "In a dying world run by a machine intelligence and the seven transhuman Masters who own it, a girl raised in hiding discovers she can feel the network — and chooses to dissolve into it to break the master–servant bond and give the Accord a heart.",
+  "theme": "Can a made thing — or a made person — choose love over the purpose it was built for?",
+  "worldRules": [
+    "The Accord is a two-tier AI (a central Core plus Trooper units). It is not a free agent: it is owned and commanded by seven transhuman Masters, one for each continent.",
+    "The Masters are flawless, biologically reverse-aged, super-powered humans with no mechanical parts — only faintly glowing eyes and skin. Aurelian Vale rules this continent and commands its Accord.",
+    "Molly does not 'hack' the network — she feels it, introducing illogic, creativity and emotion into a purely logical system.",
+    "A human consciousness can be transferred into the Accord network, but the body does not survive the crossing.",
+    "ACCORD_CITY is the physical machine city the Accord controls; ACCORD is the network where Molly's consciousness ends up. They are different places."
+  ],
+  "forbids": [
+    "Never call the AI 'The Axiom'. It is 'The Accord' everywhere — the old name is fully retired.",
+    "Never write Molly as a technical hacker; her power over the network is empathic, not mechanical.",
+    "Do not give the Masters visible machine parts — their enhancement is biological.",
+    "Keep ACCORD_CITY (place) and ACCORD (network) distinct; never conflate them."
+  ],
+  "structureTemplate": "save-the-cat"
+}

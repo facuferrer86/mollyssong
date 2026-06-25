@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cmqsx3sjt00012ekgiv9cjvh3",
+    "fromId": "elias",
+    "toId": "molly",
+    "type": "family",
+    "label": "father",
+    "order": 0
+  },
+  {
+    "id": "cmqsx3tec00032ekg7bxr7u55",
+    "fromId": "elias",
+    "toId": "aurelian",
+    "type": "rival",
+    "label": "old friend",
+    "order": 1
+  },
+  {
+    "id": "cmqsx3u8c00052ekg77yqphjm",
+    "fromId": "aurelian",
+    "toId": "molly",
+    "type": "antagonist",
+    "label": "",
+    "order": 2
+  },
+  {
+    "id": "cmqsx3v2d00072ekgyupa11r9",
+    "fromId": "aurelian",
+    "toId": "accord",
+    "type": "creator",
+    "label": "commands",
+    "order": 3
+  },
+  {
+    "id": "cmqsx3vwb00092ekgh21rmyb1",
+    "fromId": "molly",
+    "toId": "kael",
+    "type": "love",
+    "label": "bond",
+    "order": 4
+  },
+  {
+    "id": "cmqsx3wqj000b2ekg9iyktrkx",
+    "fromId": "molly",
+    "toId": "accord",
+    "type": "other",
+    "label": "gives it a heart",
+    "order": 5
+  }
+]

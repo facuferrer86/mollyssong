@@ -22,8 +22,27 @@ model Character {
   fields    Json // ordered label -> text map, edited as a blob in the UI
   prompt    String
   order     Int
+  mapX      Float? // relationship-map node position (percent), null = auto-layout
+  mapY      Float?
   gallery   GalleryImage[]
   positions BeatPosition[]
+  relsFrom  Relationship[] @relation("RelFrom")
+  relsTo    Relationship[] @relation("RelTo")
+}
+
+// A typed, directed relationship between two characters (the relationship web).
+model Relationship {
+  id     String    @id @default(cuid())
+  fromId String
+  toId   String
+  from   Character @relation("RelFrom", fields: [fromId], references: [id], onDelete: Cascade)
+  to     Character @relation("RelTo", fields: [toId], references: [id], onDelete: Cascade)
+  type   String    @default("") // ally/mentor/antagonist/family/love/rival/creator/other
+  label  String    @default("")
+  order  Int       @default(0)
+
+  @@index([fromId])
+  @@index([toId])
 }
 
 model GalleryImage {
@@ -48,13 +67,14 @@ model Zone {
 }
 
 model Beat {
-  id        String         @id
-  act       String
-  title     String
-  meta      String
-  links     Json // array of [a,b] character-id pairs; never queried by element
-  order     Int
-  positions BeatPosition[]
+  id           String         @id
+  act          String
+  title        String
+  meta         String
+  links        Json // array of [a,b] character-id pairs; never queried by element
+  order        Int
+  beatFunction String? // structural role from the active template, e.g. "Midpoint"
+  positions    BeatPosition[]
 }
 
 // One character's placement in one beat. A relation (not a JSON blob on Beat) so
@@ -121,6 +141,45 @@ model Scene {
   slug   String // file name
   text   String
   order  Int
+  shots  Shot[]
 
   @@unique([actKey, slug])
+}
+
+// A planned shot within a scene — the bridge from script to the AI generation
+// queue. Carries the camera spec + a generated keyframe, and an opt-in flag to
+// assemble the trailer shot list.
+model Shot {
+  pk           String  @id @default(cuid())
+  sceneId      String
+  scene        Scene   @relation(fields: [sceneId], references: [id], onDelete: Cascade)
+  order        Int
+  title        String  @default("")
+  description  String  @default("")
+  shotSize     String  @default("") // EWS/WS/FS/MS/MCU/CU/ECU/Insert
+  angle        String  @default("") // eye level/high/low/overhead/dutch/OTS/POV
+  movement     String  @default("") // static/pan/tilt/dolly/tracking/crane/handheld/push/pull
+  lens         String  @default("")
+  lighting     String  @default("")
+  durationSec  Float?
+  prompt       String  @default("") // image-gen prompt for the keyframe
+  imageUrl     String  @default("") // generated keyframe (Supabase Storage)
+  clipUrl      String? // optional generated video clip
+  notes        String  @default("")
+  inTrailer    Boolean @default(false)
+  trailerOrder Int?
+
+  @@index([sceneId])
+}
+
+// Project-level story bible: a singleton row (id == "molly"). Holds the
+// top-level canon — logline, theme, world rules, "the bible forbids" guardrails,
+// and the active beat-structure template (Phase 3).
+model Project {
+  id                String  @id @default("molly")
+  logline           String  @default("")
+  theme             String  @default("")
+  worldRules        Json    @default("[]") // string[]
+  forbids           Json    @default("[]") // string[]
+  structureTemplate String? // e.g. "save-the-cat" | "heros-journey" | "story-circle"
 }

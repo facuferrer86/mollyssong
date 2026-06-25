@@ -1,0 +1,50 @@
+{
+  "id": "elias",
+  "name": "Elias Quinn",
+  "color": "var(--elias)",
+  "role": "Father, scientist, scavenger — a secret creator of The Accord.",
+  "fields": {
+    "Role": "Protagonist. Scientist, father, scavenger.",
+    "Secret": "Retains 'admin' backdoor access to the Accord's systems.",
+    "Appearance": "Late 40s–50s. Warm soulful brown eyes, salt-and-pepper beard, grey-flecked hair, weathered skin, engineer's scarred hands. A bittersweet half-smile.",
+    "Motivation": "Guilt and atonement. He helped create the Accord; now he wants to give it the heart his team omitted — even at the cost of his daughter.",
+    "Internal Conflict": "Love for Molly vs. his need to sacrifice her to fix the world he helped break."
+  },
+  "prompt": "Gritty photorealistic post-apocalyptic prestige-drama look — 35mm film grain, shallow DOF, naturalistic warm light, muted desaturated grade. Close-up of ELIAS, ruggedly handsome late-40s man, warm soulful deep-brown eyes, full salt-and-pepper beard, thick grey-flecked brown hair, weathered skin with smile lines, tired determined gaze, bittersweet half-smile. Heavy worn wool coat over a patched sweater, scarred engineer's hands near his face. Single hanging bulb, amber light, underground lab behind.",
+  "order": 1,
+  "_readonly": {
+    "img": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4683887605.png",
+    "gallery": [
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4683887605.png",
+        "l": "Hero"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684299886.jpg",
+        "l": "Full body"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684299129.jpg",
+        "l": "Haunted"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684307933.jpg",
+        "l": "Tender"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684300397.jpg",
+        "l": "Teaching"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684300112.jpg",
+        "l": "Desperate"
+      },
+      {
+        "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/characters/4684301442.jpg",
+        "l": "Resolve"
+      }
+    ],
+    "mapX": null,
+    "mapY": null
+  }
+}

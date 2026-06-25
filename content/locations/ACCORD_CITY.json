@@ -1,0 +1,70 @@
+{
+  "id": "ACCORD_CITY",
+  "name": "Accord City",
+  "zoneKey": "ACCORD_CITY",
+  "color": "var(--cool)",
+  "order": 3,
+  "summary": "The Accord's breathtaking utopian metropolis — soaring self-replicating mesh towers, luminous and pristine, flawlessly sterile. The antithesis of the Wastelands.",
+  "rooms": [
+    {
+      "id": "atrium",
+      "name": "Tower Atrium",
+      "lighting": "Cool blue-white luminance from the walls themselves, soft volumetric god-rays.",
+      "sounds": "A pure low resonant hum, no echo, unnervingly clean.",
+      "ambient": "Awe-inspiring, sterile, seductive — beauty as the danger.",
+      "furniture": "No furniture — flowing programmable-matter surfaces, a central light-well, seamless floors.",
+      "map": "Vast circular atrium; a central light-well rising the full height, ramps spiraling the mesh walls.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. The interior atrium of a luminous utopian machine-city: soaring self-replicating geometric towers of gleaming silver programmable-matter mesh, cool blue-white light glowing from the surfaces themselves, soft volumetric god-rays, pristine seamless floors, monumental scale, flawless and sterile.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "atrium-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/ACCORD_CITY/atrium/atrium-base.png",
+            "base": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "spire",
+      "name": "Terraforming Spire",
+      "lighting": "Pulsing cold light cycling through the spire's core, sharp highlights.",
+      "sounds": "Deep sub-bass throb of immense processes, rhythmic and inhuman.",
+      "ambient": "Inhuman power, indifference — the engine optimizing humanity away.",
+      "furniture": "A towering reactor-like core of mesh, suspended geometric rings, no human concessions.",
+      "map": "A cathedral-tall shaft; the spire core at center, observation rings circling it at height.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. The core of a terraforming spire inside a machine-city: a towering reactor of gleaming programmable-matter mesh, suspended geometric rings, pulsing cold blue light cycling through its core, cathedral scale, inhuman and majestic.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "spire-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/ACCORD_CITY/spire/spire-base.png",
+            "base": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "plaza",
+      "name": "The Sterile Plaza",
+      "lighting": "Even shadowless blue-white daylight, no warmth anywhere.",
+      "sounds": "Near silence, the faint hum, the absence of any life.",
+      "ambient": "Perfect, empty, uncanny — a paradise with no one in it.",
+      "furniture": "Immaculate mesh paving, self-arranging sculptural forms, reflecting pools of light.",
+      "map": "An immense open plaza ringed by towers; reflecting pools flanking a central axis to the spire.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. An immense sterile plaza in a luminous machine-city: immaculate programmable-matter paving, self-arranging sculptural forms, reflecting pools of light, soaring mesh towers all around, even shadowless blue-white light, beautiful and utterly empty.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "plaza-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/ACCORD_CITY/plaza/plaza-base.png",
+            "base": true
+          }
+        ]
+      }
+    }
+  ]
+}

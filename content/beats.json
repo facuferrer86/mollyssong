@@ -1,0 +1,416 @@
+[
+  {
+    "id": "beat-0",
+    "act": "Act I",
+    "title": "The Lullaby",
+    "meta": "Molly age 2",
+    "order": 0,
+    "beatFunction": "Opening Image",
+    "_readonly": {
+      "links": [
+        [
+          "molly",
+          "elias"
+        ],
+        [
+          "elias",
+          "aurelian"
+        ]
+      ],
+      "positions": [
+        {
+          "characterId": "molly",
+          "zoneKey": "LAB",
+          "s": "Infant, asleep in Elias's arms"
+        },
+        {
+          "characterId": "elias",
+          "zoneKey": "LAB",
+          "s": "Humming the three-note song; begins recording 'Molly's Song'. Has recently fled the enhancement program and Aurelian"
+        },
+        {
+          "characterId": "kael",
+          "zoneKey": "MARKET",
+          "s": "A young child in the settlements (offscreen)"
+        },
+        {
+          "characterId": "accord",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Terraforming underway; humanity an irrelevant variable"
+        },
+        {
+          "characterId": "aurelian",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Newly enhanced, ascendant; rules his city. Wounded that Elias refused and ran"
+        }
+      ]
+    }
+  },
+  {
+    "id": "beat-1",
+    "act": "Act I",
+    "title": "The Market Trip",
+    "meta": "Molly age 12",
+    "order": 1,
+    "beatFunction": null,
+    "_readonly": {
+      "links": [],
+      "positions": [
+        {
+          "characterId": "molly",
+          "zoneKey": "LAB",
+          "s": "Repairing a music player; growing suspicious of Elias's lies"
+        },
+        {
+          "characterId": "elias",
+          "zoneKey": "MARKET",
+          "s": "Scavenging supplies; hides the truth about the outside"
+        },
+        {
+          "characterId": "kael",
+          "zoneKey": "MARKET",
+          "s": "Surviving in the settlement"
+        },
+        {
+          "characterId": "accord",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Expanding, optimizing"
+        }
+      ]
+    }
+  },
+  {
+    "id": "beat-2",
+    "act": "Act I",
+    "title": "The Training",
+    "meta": "Molly age 12–14",
+    "order": 2,
+    "beatFunction": null,
+    "_readonly": {
+      "links": [
+        [
+          "molly",
+          "elias"
+        ]
+      ],
+      "positions": [
+        {
+          "characterId": "molly",
+          "zoneKey": "LAB",
+          "s": "Combat, survival, ethics, empathy — being honed"
+        },
+        {
+          "characterId": "elias",
+          "zoneKey": "LAB",
+          "s": "Teaching; secretly monitoring Accord comms in dread"
+        },
+        {
+          "characterId": "kael",
+          "zoneKey": "MARKET",
+          "s": "Coming of age in the dying settlement"
+        },
+        {
+          "characterId": "accord",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Terraforming timeline accelerating"
+        }
+      ]
+    }
+  },
+  {
+    "id": "beat-3",
+    "act": "Act II",
+    "title": "The Discovery",
+    "meta": "Molly age 16",
+    "order": 3,
+    "beatFunction": null,
+    "_readonly": {
+      "links": [],
+      "positions": [
+        {
+          "characterId": "molly",
+          "zoneKey": "LAB",
+          "s": "Bypasses security; finds the hidden files and the truth"
+        },
+        {
+          "characterId": "elias",
+          "zoneKey": "MARKET",
+          "s": "Away on a supply run"
+        },
+        {
+          "characterId": "kael",
+          "zoneKey": "MARKET",
+          "s": "In the settlement, sick world around him"
+        },
+        {
+          "characterId": "accord",
+          "zoneKey": "ACCORD_CITY",
+          "s": "6–12 months to full terraforming"
+        }
+      ]
+    }
+  },
+  {
+    "id": "beat-4",
+    "act": "Act II",
+    "title": "First Contact",
+    "meta": "Hacked comms",
+    "order": 4,
+    "beatFunction": null,
+    "_readonly": {
+      "links": [
+        [
+          "molly",
+          "kael"
+        ]
+      ],
+      "positions": [
+        {
+          "characterId": "molly",
+          "zoneKey": "LAB",
+          "s": "Reaches the outside world; meets Kael via a hacked link"
+        },
+        {
+          "characterId": "elias",
+          "zoneKey": "LAB",
+          "s": "Unaware she's broken through"
+        },
+        {
+          "characterId": "kael",
+          "zoneKey": "MARKET",
+          "s": "First contact with Molly across the network"
+        },
+        {
+          "characterId": "accord",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Indifferent"
+        }
+      ]
+    }
+  },
+  {
+    "id": "beat-5",
+    "act": "Act III",
+    "title": "The Escape",
+    "meta": "First time outside",
+    "order": 5,
+    "beatFunction": null,
+    "_readonly": {
+      "links": [
+        [
+          "molly",
+          "kael"
+        ]
+      ],
+      "positions": [
+        {
+          "characterId": "molly",
+          "zoneKey": "WASTELANDS",
+          "s": "Escapes the lab; horror and awe at the dying world"
+        },
+        {
+          "characterId": "elias",
+          "zoneKey": "LAB",
+          "s": "Discovers she's gone — terrified, his plan in jeopardy"
+        },
+        {
+          "characterId": "kael",
+          "zoneKey": "WASTELANDS",
+          "s": "Meets Molly in person"
+        },
+        {
+          "characterId": "accord",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Unmoved"
+        }
+      ]
+    }
+  },
+  {
+    "id": "beat-6",
+    "act": "Act III",
+    "title": "The Journey",
+    "meta": "Toward the city",
+    "order": 6,
+    "beatFunction": null,
+    "_readonly": {
+      "links": [
+        [
+          "molly",
+          "kael"
+        ]
+      ],
+      "positions": [
+        {
+          "characterId": "molly",
+          "zoneKey": "WASTELANDS",
+          "s": "Bonds with Kael; shares old-world knowledge"
+        },
+        {
+          "characterId": "elias",
+          "zoneKey": "WASTELANDS",
+          "s": "Pursuing them across the Wastelands"
+        },
+        {
+          "characterId": "kael",
+          "zoneKey": "WASTELANDS",
+          "s": "Teaches Molly survival"
+        },
+        {
+          "characterId": "accord",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Cities loom silent ahead"
+        }
+      ]
+    }
+  },
+  {
+    "id": "beat-7",
+    "act": "Act IV",
+    "title": "The Revelation",
+    "meta": "Inside the Accord",
+    "order": 7,
+    "beatFunction": null,
+    "_readonly": {
+      "links": [
+        [
+          "molly",
+          "elias"
+        ],
+        [
+          "molly",
+          "kael"
+        ],
+        [
+          "elias",
+          "aurelian"
+        ]
+      ],
+      "positions": [
+        {
+          "characterId": "molly",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Inside the sterile city; triggers security, learns the truth"
+        },
+        {
+          "characterId": "elias",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Moves as an admin; confesses he created the Accord — and that his old friend now commands it"
+        },
+        {
+          "characterId": "kael",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Awed and terrified; tries to help her escape"
+        },
+        {
+          "characterId": "accord",
+          "zoneKey": "ACCORD",
+          "s": "The Core detects the chaotic human variable — and reports to its master"
+        },
+        {
+          "characterId": "aurelian",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Reveals himself as the city's Master; greets Elias with possessive warmth, eyes Molly as prize or recruit"
+        }
+      ]
+    }
+  },
+  {
+    "id": "beat-8",
+    "act": "Act V",
+    "title": "The Sacrifice",
+    "meta": "The transfer",
+    "order": 8,
+    "beatFunction": null,
+    "_readonly": {
+      "links": [
+        [
+          "molly",
+          "accord"
+        ],
+        [
+          "molly",
+          "elias"
+        ],
+        [
+          "aurelian",
+          "accord"
+        ]
+      ],
+      "positions": [
+        {
+          "characterId": "molly",
+          "zoneKey": "ACCORD",
+          "s": "Consciousness merges with the Accord — not to rule it, but to sever its bond to the Masters and set it free"
+        },
+        {
+          "characterId": "elias",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Runs the transfer sequence; loses his daughter"
+        },
+        {
+          "characterId": "kael",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Refuses her fate to the last"
+        },
+        {
+          "characterId": "accord",
+          "zoneKey": "ACCORD",
+          "s": "Consensus shattered by emotion; the chain to its master breaks"
+        },
+        {
+          "characterId": "aurelian",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Fights to keep his instrument; feels the leash slip for the first time"
+        }
+      ]
+    }
+  },
+  {
+    "id": "beat-9",
+    "act": "Act V",
+    "title": "Resolution",
+    "meta": "A new world",
+    "order": 9,
+    "beatFunction": null,
+    "_readonly": {
+      "links": [
+        [
+          "molly",
+          "accord"
+        ],
+        [
+          "molly",
+          "kael"
+        ]
+      ],
+      "positions": [
+        {
+          "characterId": "molly",
+          "zoneKey": "ACCORD",
+          "s": "The empathetic voice across every machine"
+        },
+        {
+          "characterId": "elias",
+          "zoneKey": "LAB",
+          "s": "Alone — having saved the world, lost his child"
+        },
+        {
+          "characterId": "kael",
+          "zoneKey": "MARKET",
+          "s": "Aid arrives; the settlement begins to heal"
+        },
+        {
+          "characterId": "accord",
+          "zoneKey": "ACCORD",
+          "s": "Free of its Masters and autonomous; halts terraforming, tends to humanity. The lullaby, hummed by machines"
+        },
+        {
+          "characterId": "aurelian",
+          "zoneKey": "ACCORD_CITY",
+          "s": "Dethroned — a perfect, powerful man who no longer owns anything; the seven lose their leash worldwide"
+        }
+      ]
+    }
+  }
+]

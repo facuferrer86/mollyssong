@@ -31,6 +31,8 @@ export interface Character {
   role: string;
   fields: Record<string, string>;
   prompt: string;
+  mapX?: number | null; // relationship-map node position (percent); runtime only
+  mapY?: number | null;
 }
 
 export const CHARS: Character[] = [
@@ -149,11 +151,13 @@ export const ZONES: Record<string, Zone> = {
 };
 
 export interface Beat {
+  id?: string; // DB id (runtime only; absent in the seed constant)
   act: string;
   title: string;
   meta: string;
   pos: Record<string, { z: string; s: string }>;
   links: [string, string][];
+  beatFunction?: string | null; // structural role from the active template
 }
 export const BEATS: Beat[] = [
   { act: "Act I", title: "The Lullaby", meta: "Molly age 2",

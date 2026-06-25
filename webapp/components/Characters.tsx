@@ -4,6 +4,23 @@ import type { Character } from "@/lib/data";
 import Img from "./Img";
 import { toast } from "./toast";
 
+// Canonical story-bible fields, always surfaced (in this order) for every
+// character so the arc toolkit — Want vs Need, the Ghost/Wound, the Lie, the
+// Flaw — is first-class. Any other existing field keys render after these.
+const CANON_FIELDS = [
+  "Role",
+  "Want",
+  "Need",
+  "Ghost / Wound",
+  "Lie / False Belief",
+  "Flaw",
+  "Arc",
+  "Voice",
+  "Appearance",
+  "Abilities",
+  "Motivation",
+];
+
 export default function Characters({ initial }: { initial: Character[] }) {
   const [chars, setChars] = useState<Character[]>(initial);
   const [openId, setOpenId] = useState<string | null>(null);
@@ -61,6 +78,14 @@ export default function Characters({ initial }: { initial: Character[] }) {
     const c = chars.find((x) => x.id === id)!;
     navigator.clipboard.writeText(c.prompt);
     toast("Prompt copied");
+  }
+  function addField(id: string) {
+    const key = window.prompt("New field name (e.g. 'Secret', 'Relationships')")?.trim();
+    if (!key) return;
+    setChars((prev) =>
+      prev.map((c) => (c.id === id ? { ...c, fields: { ...c.fields, [key]: c.fields[key] ?? "" } } : c))
+    );
+    queueSave(id);
   }
 
   return (
@@ -134,16 +159,21 @@ export default function Characters({ initial }: { initial: Character[] }) {
                   {open.gallery.length} images · click a thumbnail to preview, click the big image to open
                   full size
                 </div>
-                {Object.keys(open.fields).map((k) => (
-                  <div className="field" key={k}>
-                    <label>{k}</label>
-                    <textarea
-                      rows={2}
-                      value={open.fields[k]}
-                      onChange={(e) => editField(open.id, k, e.target.value)}
-                    />
-                  </div>
-                ))}
+                {[...CANON_FIELDS, ...Object.keys(open.fields).filter((k) => !CANON_FIELDS.includes(k))].map(
+                  (k) => (
+                    <div className="field" key={k}>
+                      <label>{k}</label>
+                      <textarea
+                        rows={2}
+                        value={open.fields[k] ?? ""}
+                        onChange={(e) => editField(open.id, k, e.target.value)}
+                      />
+                    </div>
+                  )
+                )}
+                <button className="btn" style={{ marginBottom: 12 }} onClick={() => addField(open.id)}>
+                  + Add field
+                </button>
                 <div className="field">
                   <label>Image Master Prompt (paste into your image generator)</label>
                   <textarea

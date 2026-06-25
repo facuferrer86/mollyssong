@@ -1,0 +1,50 @@
+{
+  "id": "ACCORD",
+  "name": "The Accord (Network)",
+  "zoneKey": "ACCORD",
+  "color": "var(--accord)",
+  "order": 4,
+  "summary": "The non-physical space of the Accord's consensus — where Molly's consciousness ends up. Abstract, luminous, a realm of pure logic broken open by emotion.",
+  "rooms": [
+    {
+      "id": "consensus",
+      "name": "The Consensus Chamber",
+      "lighting": "Floating points of blue light in voidless dark, threads of data between them.",
+      "sounds": "Layered whispering logic, a chorus of cold reasoning voices.",
+      "ambient": "Vast, cerebral, the meeting-mind of specialized AIs.",
+      "furniture": "No physical objects — constellations of nodes, flowing data-threads, the Core's silver presence.",
+      "map": "A boundless dark space; nodes arranged in a sphere, the Core at the conceptual center.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. An abstract digital consensus space: constellations of glowing blue nodes suspended in voidless dark, luminous threads of data weaving between them, a faint statuesque silver presence at the center, cerebral and infinite.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "consensus-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/ACCORD/consensus/consensus-base.png",
+            "base": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "datahall",
+      "name": "The Data-Hall",
+      "lighting": "Cool cathedral light through endless luminous columns of streaming data.",
+      "sounds": "A rising hum that resolves into the three-note lullaby — emotion entering logic.",
+      "ambient": "Transcendent, transformative — where the lullaby reshapes the machine.",
+      "furniture": "Infinite columns of streaming light, arches of data, a warm amber thread spreading through the cold.",
+      "map": "An endless luminous hall of data columns; a single warm amber current threading down the central aisle.",
+      "prompt": "Gritty photorealistic post-apocalyptic prestige-drama still — 35mm, shallow DOF, fine film grain, naturalistic light, muted desaturated grade with teal shadows. No people in frame, environment only. A luminous cathedral-like data-hall: endless columns of streaming blue light, arches of flowing data, cool infinite perspective — and a single warm amber thread of light spreading through the cold, emotion entering a logical machine.",
+      "_readonly": {
+        "images": [
+          {
+            "id": "datahall-base",
+            "l": "Establishing",
+            "u": "https://zljndviczbravekxfkhy.supabase.co/storage/v1/object/public/renders/locations/ACCORD/datahall/datahall-base.png",
+            "base": true
+          }
+        ]
+      }
+    }
+  ]
+}

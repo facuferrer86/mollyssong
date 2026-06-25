@@ -1,7 +1,10 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import type { Character, Beat, Zone } from "@/lib/data";
+import type { ProjectData } from "@/lib/repo/project";
+import { STRUCTURES, structureById } from "@/lib/structures";
 import StageMap from "./StageMap";
+import { toast } from "./toast";
 
 const LANES = ["LAB", "MARKET", "WASTELANDS", "ACCORD", "ACCORD_CITY"];
 const LANEFRAC: Record<string, number> = {
@@ -143,18 +146,153 @@ function Threads({ characters, beats, zones }: StoryData) {
   );
 }
 
-// Storyline tab shell: two views over the same beats/zones data — the threads
-// chart (lines over time) and the stage map (who is where, when). The map was
-// formerly its own "Plot Locations" tab; it lives here now that "Plot
-// Locations" has been repurposed into the Location Bible.
-export default function Storyline({ characters, beats, zones }: StoryData) {
-  const [view, setView] = useState<"threads" | "map">("threads");
+// Overlay a proven beat-sheet (Save the Cat / Hero's Journey / Story Circle) on
+// the story's beats: pick a template, tag each beat with its structural role,
+// and see which template beats are still uncovered.
+function StructureView({ beats: initialBeats, project }: { beats: Beat[]; project: ProjectData }) {
+  const [templateId, setTemplateId] = useState<string>(project.structureTemplate ?? "");
+  const [beats, setBeats] = useState<Beat[]>(initialBeats);
+  const structure = structureById(templateId);
+
+  async function save(body: unknown) {
+    try {
+      const res = await fetch("/api/save", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      if (!res.ok) throw new Error();
+      toast("Saved");
+    } catch {
+      toast("Save failed");
+    }
+  }
+  function setTemplate(id: string) {
+    setTemplateId(id);
+    save({ kind: "project", structureTemplate: id || null });
+  }
+  function setFn(beatId: string, fn: string) {
+    setBeats((prev) => prev.map((b) => (b.id === beatId ? { ...b, beatFunction: fn || null } : b)));
+    save({ kind: "beat-function", id: beatId, beatFunction: fn || null });
+  }
+  const assigned = new Set(beats.map((b) => b.beatFunction).filter(Boolean) as string[]);
+
+  return (
+    <div>
+      <div className="banner">
+        Map your beats onto a proven structure. Pick a template, tag each beat with its role, and the
+        coverage list flags which template beats you haven&apos;t hit yet (e.g. a missing Midpoint).
+      </div>
+      <div className="field" style={{ maxWidth: 360 }}>
+        <label>Structure template</label>
+        <select value={templateId} onChange={(e) => setTemplate(e.target.value)}>
+          <option value="">— none —</option>
+          {STRUCTURES.map((s) => (
+            <option key={s.id} value={s.id}>
+              {s.name}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {structure && (
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 20, marginTop: 14 }}>
+          <div>
+            <h3 className="section" style={{ fontSize: 14 }}>
+              Your beats
+            </h3>
+            <div style={{ display: "grid", gap: 8 }}>
+              {beats.map((b) => (
+                <div
+                  key={b.id ?? b.title}
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr 180px",
+                    gap: 8,
+                    alignItems: "center",
+                  }}
+                >
+                  <div>
+                    <div className="muted" style={{ fontSize: 11 }}>
+                      {b.act}
+                    </div>
+                    <div>{b.title}</div>
+                  </div>
+                  <select
+                    value={b.beatFunction ?? ""}
+                    onChange={(e) => b.id && setFn(b.id, e.target.value)}
+                  >
+                    <option value="">— role —</option>
+                    {structure.beats.map((tb) => (
+                      <option key={tb.name} value={tb.name}>
+                        {tb.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="section" style={{ fontSize: 14 }}>
+              {structure.name} — coverage
+            </h3>
+            <div style={{ display: "grid", gap: 6 }}>
+              {structure.beats.map((tb) => {
+                const hit = assigned.has(tb.name);
+                return (
+                  <div
+                    key={tb.name}
+                    style={{
+                      display: "flex",
+                      gap: 8,
+                      padding: "6px 8px",
+                      borderRadius: 6,
+                      background: hit ? "rgba(80,200,120,0.10)" : "rgba(220,80,80,0.08)",
+                    }}
+                  >
+                    <span style={{ width: 16 }}>{hit ? "✓" : "○"}</span>
+                    <div>
+                      <div style={{ fontSize: 13 }}>
+                        <b>{tb.name}</b>{" "}
+                        <span className="muted" style={{ fontSize: 11 }}>
+                          · {tb.at}
+                        </span>
+                      </div>
+                      <div className="muted" style={{ fontSize: 11 }}>
+                        {tb.blurb}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// Storyline tab shell: three views over the same beats/zones data — the threads
+// chart (lines over time), the stage map (who is where, when), and the structure
+// overlay (beats mapped onto a template).
+export default function Storyline({
+  characters,
+  beats,
+  zones,
+  project,
+}: StoryData & { project: ProjectData }) {
+  const [view, setView] = useState<"threads" | "map" | "structure">("threads");
   return (
     <div>
       <h2 className="section">
         {view === "threads"
           ? "Storyline Chart — character threads through time"
-          : "Storyline Chart — who is where, when"}
+          : view === "map"
+            ? "Storyline Chart — who is where, when"
+            : "Storyline Chart — beat structure"}
       </h2>
       <div className="viewtoggle">
         <button
@@ -163,18 +301,19 @@ export default function Storyline({ characters, beats, zones }: StoryData) {
         >
           Threads
         </button>
-        <button
-          className={"vt" + (view === "map" ? " active" : "")}
-          onClick={() => setView("map")}
-        >
+        <button className={"vt" + (view === "map" ? " active" : "")} onClick={() => setView("map")}>
           Map
         </button>
+        <button
+          className={"vt" + (view === "structure" ? " active" : "")}
+          onClick={() => setView("structure")}
+        >
+          Structure
+        </button>
       </div>
-      {view === "threads" ? (
-        <Threads characters={characters} beats={beats} zones={zones} />
-      ) : (
-        <StageMap characters={characters} beats={beats} zones={zones} />
-      )}
+      {view === "threads" && <Threads characters={characters} beats={beats} zones={zones} />}
+      {view === "map" && <StageMap characters={characters} beats={beats} zones={zones} />}
+      {view === "structure" && <StructureView beats={beats} project={project} />}
     </div>
   );
 }

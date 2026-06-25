@@ -3,17 +3,26 @@ import { useState } from "react";
 import type { Character, Beat, Zone } from "@/lib/data";
 import type { Location } from "@/lib/locations";
 import type { Scene } from "@/lib/content";
+import type { ProjectData } from "@/lib/repo/project";
+import type { Shot } from "@/lib/repo/shots";
+import type { Relationship } from "@/lib/repo/relationships";
 import Characters from "./Characters";
+import Relationships from "./Relationships";
 import Storyline from "./Storyline";
 import LocationBible from "./LocationBible";
 import Scripts from "./Scripts";
+import Storyboard from "./Storyboard";
+import Bible from "./Bible";
 import { Toaster } from "./toast";
 
 const TABS = [
   { id: "characters", label: "① Characters" },
-  { id: "story", label: "② Storyline Chart" },
-  { id: "plot", label: "③ Location Bible" },
-  { id: "scripts", label: "④ Scripts" },
+  { id: "relationships", label: "② Relationships" },
+  { id: "story", label: "③ Storyline Chart" },
+  { id: "plot", label: "④ Location Bible" },
+  { id: "scripts", label: "⑤ Scripts" },
+  { id: "storyboard", label: "⑥ Storyboard" },
+  { id: "bible", label: "⑦ World Bible" },
 ];
 
 export default function Hub({
@@ -22,6 +31,9 @@ export default function Hub({
   scenes,
   beats,
   zones,
+  project,
+  shots,
+  relationships,
   userEmail,
 }: {
   characters: Character[];
@@ -29,6 +41,9 @@ export default function Hub({
   scenes: Scene[];
   beats: Beat[];
   zones: Record<string, Zone>;
+  project: ProjectData;
+  shots: Shot[];
+  relationships: Relationship[];
   userEmail?: string | null;
 }) {
   const [tab, setTab] = useState("characters");
@@ -62,14 +77,27 @@ export default function Hub({
         <div className={"tab" + (tab === "characters" ? " active" : "")}>
           <Characters initial={characters} />
         </div>
+        <div className={"tab" + (tab === "relationships" ? " active" : "")}>
+          {tab === "relationships" && (
+            <Relationships characters={characters} initial={relationships} />
+          )}
+        </div>
         <div className={"tab" + (tab === "story" ? " active" : "")}>
-          {tab === "story" && <Storyline beats={beats} zones={zones} characters={characters} />}
+          {tab === "story" && (
+            <Storyline beats={beats} zones={zones} characters={characters} project={project} />
+          )}
         </div>
         <div className={"tab" + (tab === "plot" ? " active" : "")}>
           <LocationBible initial={locations} />
         </div>
         <div className={"tab" + (tab === "scripts" ? " active" : "")}>
           <Scripts initial={scenes} />
+        </div>
+        <div className={"tab" + (tab === "storyboard" ? " active" : "")}>
+          {tab === "storyboard" && <Storyboard scenes={scenes} initialShots={shots} />}
+        </div>
+        <div className={"tab" + (tab === "bible" ? " active" : "")}>
+          {tab === "bible" && <Bible initial={project} />}
         </div>
       </main>
       <Toaster />
